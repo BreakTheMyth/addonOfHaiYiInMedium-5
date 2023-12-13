@@ -1,0 +1,102 @@
+html {
+    background-image: url(res/webBG.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+.linkDiv {
+    background-size: cover;
+    background-color: black;
+    opacity: 0.6;
+
+    width: 20vw;
+    height: 20vw;
+
+    margin-left: 4vw;
+    float: left;
+    position: relative;
+    clip-path: polygon(50% 0%, 94% 25%, 94% 75%, 50% 100%, 6% 75%, 6% 25%);
+
+    transition: opacity 1s;
+}
+
+.linkDiv:nth-child(6n+4) {
+    margin-left: 16vw;
+}
+
+.linkDiv:hover {
+    opacity: 1;
+}
+
+#divArray {
+    width: 90vw;
+    height: 100%;
+
+    position: absolute;
+    left: 50%;
+
+    overflow-y: auto;
+    scrollbar-color: #ffffff00 #ffffff00;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    transform: translateX(-50%);
+
+    transition: scrollbar-color 0.5s;
+}
+
+.title {
+    position: absolute;
+    background-color: black;
+    color: #00d9ff;
+    opacity: 0;
+
+    width: 0vw;
+    height: auto;
+
+    max-width: 20vw;
+
+    font-size: 2vw;
+
+    transition: opacity 0.5s, width 0.5s;
+}
+
+.editBox {
+    width: 50vw;
+    height: 50vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: black;
+    opacity: 0.8;
+
+    overflow: auto;
+    scrollbar-color: #00d9ff #ffffff00;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    font-size: medium;
+    color: white;
+
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+.previewFrame {
+    background-color: #00d9ffaa;
+
+    width: 100vw;
+    height: 0vh;
+
+    opacity: 0;
+
+    position: absolute;
+
+    transform: scale(20%, 20%) translate(-200%, -200%);
+
+    transition: opacity 0.1s 0.5s, height 0.5s 0.5s;
+}

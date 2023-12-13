@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "AddonOfHaiYiInMedium^5",
+    "version": "1.0",
+    "description": "替换了海伊主题的新标签页和网页（指换了张14块钱的壁纸），但是海很深，不是年轻人能够驾驭的",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "icons": {
+        "192": "res/defaultIcon.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
