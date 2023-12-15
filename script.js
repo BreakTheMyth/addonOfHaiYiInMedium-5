@@ -40,8 +40,8 @@ window.onload = function () {
                 },
                 {
                     "title": "GitHub",
-                    "iconUri": "https://github.com/fluidicon.png",
-                    // "iconUri": "https://github.githubassets.com/favicons/favicon-dark.svg",
+                    // "iconUri": "https://github.com/fluidicon.png",
+                    "iconUri": "https://github.githubassets.com/favicons/favicon-dark.svg",
                     "uri": "https://github.com/"
                 },
                 {
@@ -136,9 +136,7 @@ window.onload = function () {
 
     function checkScroll() {
         divArray.style.scrollbarColor = "#ffffff00 #ffffff00";
-        for (var y = 0; y <= divArray.scrollTop; y += scrollNum) {
-            divArrayY = y;
-        }
+        if (divArray.scrollTop > divArray.scrollHeight - divArray.clientHeight - divArray.lastChild.offsetHeight/2) divArrayY -= divArray.lastChild.offsetHeight;
         divArray.scrollTop = divArrayY;
     }
 
