@@ -244,6 +244,12 @@ window.onload = function () {
                     var obj = jsonData;
                     divArray.innerHTML = ""
                     addLink(obj);
+                    for (var i = 0; i < 3; i++) {
+                        var div = document.createElement("div");
+                        div.className = "linkDiv";
+                        div.style.opacity = "0";
+                        divArray.appendChild(div);
+                    }
                     editBox.value = "";
                     this.body.removeChild(editBox);
                 } catch (error) {
