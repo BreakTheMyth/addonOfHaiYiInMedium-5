@@ -12,7 +12,7 @@ window.onload = function () {
     previewFrame.className = "previewFrame";
     document.body.appendChild(previewFrame);
     previewFrame.src = "about:blank";
-    previewFrame.sandbox = "allow-same-origin"
+    previewFrame.sandbox = "allow-same-origin allow-scripts"
 
     let divArrayY = 0;
     let devX = -50;
