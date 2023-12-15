@@ -138,17 +138,17 @@ window.onload = function () {
         divArray.style.scrollbarColor = "#ffffff00 #ffffff00";
     }
 
-    divArray.addEventListener("wheel", function (e) {
+    document.body.addEventListener("wheel", function (e) {
         e.preventDefault();
-        scrollNum = this.children[0].offsetHeight;
+        scrollNum = divArray.children[0].offsetHeight;
         if (e.deltaY < 0) {
             if (divArrayY > 0) divArrayY -= scrollNum;
         } else if (e.deltaY > 0) {
             if (divArrayY < divArray.scrollHeight - divArray.clientHeight) divArrayY += scrollNum;
         }
 
-        this.scrollTop = divArrayY;
-        this.style.scrollbarColor = "#00d9ffaa #ffffff00";
+        divArray.scrollTop = divArrayY;
+        divArray.style.scrollbarColor = "#00d9ffaa #ffffff00";
         handleScroll();
     });
 
