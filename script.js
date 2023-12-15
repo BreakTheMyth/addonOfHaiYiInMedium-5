@@ -134,11 +134,15 @@ window.onload = function () {
         scrollTimer = setTimeout(checkScroll, 500);
     }
 
-    function checkScroll(div) {
+    function checkScroll() {
         divArray.style.scrollbarColor = "#ffffff00 #ffffff00";
+        for (var y = 0; y <= divArray.scrollTop; y += scrollNum) {
+            divArrayY = y;
+        }
+        divArray.scrollTop = divArrayY;
     }
 
-    document.body.addEventListener("wheel", function (e) {
+    document.documentElement.addEventListener("wheel", function (e) {
         e.preventDefault();
         scrollNum = divArray.children[0].offsetHeight;
         if (e.deltaY < 0) {
