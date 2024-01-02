@@ -10,6 +10,8 @@
 
 4. 此扩展暂不兼容 **Firefox移动端** 
 
+5. 代码一坨屎，而且没注释，刚学的JS，更新随缘咯
+
 ## 安装
 
 在 [Firefox 附加组件](https://addons.mozilla.org/zh-CN/firefox/addon/addonofhaiyiinmedium-5/) 安装
@@ -106,3 +108,7 @@
     * 完成编辑后将内容复制到 **新标签耶的文本域** 中
 
 * **新标签耶** 中按 `Shift + Enter` 完成编辑
+
+## 关于搜索框
+
+- **没有搜索框** ，firefox默认的搜索框很好用，多用用，快捷键： `Ctrl + K`
